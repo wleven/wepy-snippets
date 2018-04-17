@@ -4,6 +4,7 @@
   "description": "小程序wepy框架代码片段",
   "version": "0.0.1",
   "publisher": "wleven",
+  "icon": "https://raw.githubusercontent.com/wleven/wepy-snippets/master/images/logo.png",
   "engines": {
     "vscode": "^1.22.0"
   },
