@@ -1,0 +1,21 @@
+{
+  "name": "wepy-snippets",
+  "displayName": "wepy snippets",
+  "description": "小程序wepy框架代码片段",
+  "version": "0.0.1",
+  "publisher": "wleven",
+  "engines": {
+    "vscode": "^1.22.0"
+  },
+  "categories": ["Snippets"],
+  "contributes": {
+    "snippets": [
+      { "language": "vue", "path": "./snippets/vue.json" },
+      { "language": "html", "path": "./snippets/vue.json" },
+      { "language": "vue-html", "path": "./snippets/vue.json" },
+      { "language": "wpy", "path": "./snippets/vue.json" },
+      { "language": "javascript", "path": "./snippets/api.json" },
+      { "language": "typescript", "path": "./snippets/api.json" }
+    ]
+  }
+}

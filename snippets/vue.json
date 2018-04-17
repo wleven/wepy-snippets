@@ -1,0 +1,361 @@
+{
+  "we.block": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.block",
+    "body": ["<block wx:if=\"{{${1:array}}}\" wx:key=\"\">", "", "</block>"],
+    "description": "数组遍历"
+  },
+  "we.view": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.view",
+    "body": ["<view>{{$1}}</view>"],
+    "description": "视图容器"
+  },
+  "we.view.tap": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.view.tap",
+    "body": ["<view @tap=\"$1\">{{$2}}</view>"],
+    "description": "视图容器-事件"
+  },
+  "we.view.all": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.view.all",
+    "body": [
+      "<view hover-class=\"{{$1}}\" hover-stop-propagation=\"{{$2}}\" hover-start-time=\"{{$3}}\" hover-stay-time=\"{{$4}}\" @tap=\"$5\">{{$6}}</view>"
+    ],
+    "description": "视图容器-全部"
+  },
+  "we.scroll-view": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.scroll-view",
+    "body": ["<scroll-view>$1</scroll-view>"],
+    "description": "可滚动视图区域"
+  },
+  "we.scroll-view.x": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.scroll-view.x",
+    "body": [
+      "<scroll-view scroll-x scroll-with-animation @scroll=\"$1\" >$2</scroll-view>"
+    ],
+    "description": "可滚动视图区域-横向"
+  },
+  "we.scroll-view.y": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.scroll-view.x",
+    "body": [
+      "<scroll-view scroll-y scroll-with-animation  @scroll=\"$1\" >$2</scroll-view>"
+    ],
+    "description": "可滚动视图区域-纵向"
+  },
+  "we.scroll-view.all": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.scroll-view.all",
+    "body": [
+      "<scroll-view scroll-x scroll-y scroll-with-animation upper-threshold=\"50\" lower-threshold=\"50\" scroll-top=\"$1\" scroll-left=\"$2\"  @scrolltoupper=\"$3\" @scrolltolower=\"$4\" @scroll=\"$5\">$6</scroll-view>"
+    ],
+    "description": "可滚动视图区域-全部"
+  },
+  "we.swiper": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.swiper",
+    "body": [
+      "<swiper indicator-dots autoplay circular>",
+      "  <block wx:for=\"{{${1:items}}}\" wx:key=\"\">",
+      "    <swiper-item>",
+      "      <image mode=\"{{${2:item}.mode}}\" src=\"{{${2:item}.src}}\"></image>",
+      "    </swiper-item>",
+      "  </block>",
+      "</swiper>"
+    ],
+    "description": "可滚动视图区域-全部"
+  },
+  "we.icon": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.icon",
+    "body": [
+      "<icon type=\"${1| success, success_no_circle, info, warn, waiting, cancel, download, search, clear|}\" size=\"${2:24}\"></icon>"
+    ],
+    "description": "图标"
+  },
+  "we.rish-text.node": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.rish-text.node",
+    "body": ["<rish-text type=\"node\" nodes=\"{{$1}}\"></rish-text>"],
+    "description": "富文本"
+  },
+  "we.rish-text.text": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.rish-text.text",
+    "body": ["<rish-text type=\"text\" nodes=\"{{$1}}\"></rish-text>"],
+    "description": "富文本"
+  },
+  "we.progress": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.progress",
+    "body": [
+      "<progress percent=\"${1:0}\" show-info=\"${2:true}\" stroke-width=\"${3:6}\" color=\"${4:#09BB07}\" active=\"${5:true}\"></progress>"
+    ],
+    "description": "进度条"
+  },
+  "we.form": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.form",
+    "body": [
+      "<form report-submit=\"${1:true}\" @submit=\"${2:submit}\" @reset=\"${3:reset}\"></form>"
+    ],
+    "description": "表单"
+  },
+  "we.form.button": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.form.button",
+    "body": [
+      "<button size=\"${1|defult,mini|}\" type=\"${2|defult,primary,warn|}\" form-type=\"${3|submit,reset|}\" disabled=\"${4|false,true|}\">$5</button>"
+    ],
+    "description": "表单"
+  },
+  "we.form.button.contact": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.form.button.contact",
+    "body": [
+      "<button size=\"${1|defult,mini|}\" type=\"${2|defult,primary,warn|}\" form-type=\"${3|submit,reset|}\" disabled=\"${4|false,true|}\" open-type=\"contact\" @contact=\"contact\">$5</button>"
+    ],
+    "description": "表单.打开客服会话"
+  },
+  "we.form.button.contact.card": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.form.button.contact.card",
+    "body": [
+      "<button size=\"${1|defult,mini|}\" type=\"${2|defult,primary,warn|}\" form-type=\"${3|submit,reset|}\" disabled=\"${4|false,true|}\" open-type=\"contact\" show-message-card=\"true\" session-from=\"${5:微信小程序}\" send-message-title=\"${6:标题}\" send-message-path=\"${7:分享路径}\" send-message-img=\"${8:会话内消息卡片图片}\" @contact=\"contact\">$9</button>"
+    ],
+    "description": "表单.打开客服会话 显示消息卡片"
+  },
+  "we.form.button.share": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.form.button.share",
+    "body": [
+      "<button size=\"${1|defult,mini|}\" type=\"${2|defult,primary,warn|}\" form-type=\"${3|submit,reset|}\" disabled=\"${4|false,true|}\" open-type=\"share\">$5</button>"
+    ],
+    "description": "表单.触发用户转发"
+  },
+  "we.form.button.getUserInfo": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.form.button.getUserInfo",
+    "body": [
+      "<button size=\"${1|defult,mini|}\" type=\"${2|defult,primary,warn|}\" form-type=\"${3|submit,reset|}\" disabled=\"${4|false,true|}\" open-type=\"getUserInfo\" @getuserinfo=\"getUserInfo\" lang=\"${5|zh_CN,zh_TW,en|}\">$6</button>"
+    ],
+    "description": "表单.获取用户信息,可以从bindgetuserinfo回调中获取到用户信息"
+  },
+  "we.form.button.getPhoneNumber": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.form.button.getPhoneNumber",
+    "body": [
+      "<button size=\"${1|defult,mini|}\" type=\"${2|defult,primary,warn|}\" form-type=\"${3|submit,reset|}\" disabled=\"${4|false,true|}\" open-type=\"getPhoneNumber\" @getphonenumber=\"getPhoneNumber\">$5</button>"
+    ],
+    "description":
+      "表单.获取用户手机号,可以从bindgetphonenumber回调中获取到用户信息"
+  },
+  "we.form.button.launchApp": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.form.button.launchApp",
+    "body": [
+      "<button size=\"${1|defult,mini|}\" type=\"${2|defult,primary,warn|}\" form-type=\"${3|submit,reset|}\" disabled=\"${4|false,true|}\" open-type=\"launchApp\" app-parameter=\"$5\">$6</button>"
+    ],
+    "description": "表单.打开APP,可以通过app-parameter属性设定向APP传的参数"
+  },
+  "we.form.checkbox": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.form.checkbox",
+    "body": [
+      "<checkbox-group @change=\"checkboxChange\">",
+      "<label wx:for=\"{{${1:items}}}\">",
+      "<checkbox value=\"{{${2:item}.name}}\" checked=\"{{${2:item}.checked}}\"/>{{${2:item}.value}}",
+      "</label>",
+      "</checkbox-group>"
+    ],
+    "description": "表单.多选框"
+  },
+  "we.form.input": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.form.input",
+    "body": [
+      "<input value=\"$1\" type=\"${2|text,number,idcard,digit|}\" password=\"${3:false}\"  placeholder=\"${4:占位符}\" placeholder-class=\"${5:placeholder}\" maxlength=\"140\" @blur=\"$6\">$7</input>"
+    ],
+    "description": "表单.输入框"
+  },
+  "we.form.lable": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.form.lable",
+    "body": ["<lable for=\"$1\">$2</lable>"],
+    "description": "表单.标签"
+  },
+  "we.form.picker.selector": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.form.picker.selector",
+    "body": [
+      "<picker @change=\"bindPickerChange\" value=\"{{${1:index}}}\" range=\"{{${2:array}}}\">",
+      "<view class=\"picker\">当前选择：{{${2:array}[${1:index}]}}</view>",
+      "</picker>"
+    ],
+    "description": "表单.选择器.普通"
+  },
+  "we.form.picker.multiSelector": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.form.picker.multiSelector",
+    "body": [
+      "<picker mode=\"multiSelector\" @change=\"bindMultiPickerChange\"  value=\"{{${1:index}}}\" range=\"{{${2:array}}}\">",
+      "<view class=\"picker\">当前选择：{{${2:array}[0][${1:index}[0]]}},{{${2:array}[1][${1:index}[1]]}},{{${2:array}[2][${1:index}[2]]}}</view>",
+      "</picker>"
+    ],
+    "description": "表单.选择器.多列选择"
+  },
+  "we.form.picker.time": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.form.picker.time",
+    "body": [
+      "<picker mode=\"time\" @change=\"bindPickerChange\" value=\"{{${1:time}}}\"  start=\"00: 00\" end=\"23: 59\">",
+      "<view class=\"picker\">当前选择：{{${1:time}}}</view>",
+      "</picker>"
+    ],
+    "description": "表单.选择器.时间选择"
+  },
+  "we.form.picker.date": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.form.picker.date",
+    "body": [
+      "<picker mode=\"date\" @change=\"bindPickerChange\" value=\"{{${1:date}}}\"  start=\"2015-09-0\" end=\"2017-09-01\">",
+      "<view class=\"picker\">当前选择：{{${1:date}}}</view>",
+      "</picker>"
+    ],
+    "description": "表单.选择器.日期选择"
+  },
+  "we.form.picker.region": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.form.picker.region",
+    "body": [
+      "<picker mode=\"region\" @change=\"bindPickerChange\" value=\"{{region}}\">",
+      "<view class=\"picker\">当前选择：{{region[0]}},{{region[1]}},{{region[2]}}</view>",
+      "</picker>"
+    ],
+    "description": "表单.选择器.省市区选择"
+  },
+  "we.form.picker-view": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.form.picker-view",
+    "body": [
+      "<picker-view  @change=\"bindChange\" value=\"{{${1:items}}}\">",
+      "<picker-view-column>",
+      "<view wx:for=\"{{${2:item}}}\">{{${2:item}}}</view>",
+      "</picker-view-column>",
+      "</picker-view>"
+    ],
+    "description": "表单.嵌入页面的滚动选择器"
+  },
+  "we.form.radio": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.form.radio",
+    "body": [
+      "<radio-group class=\"radio-group\" @change=\"radioChange\">",
+      "<label class=\"radio\" wx:for=\"{{${1:items}}}\">",
+      "<radio value=\"{{${2:item}.name}}\" checked=\"{{${2:item}.checked}}\"/>{{${2:item}.value}}",
+      "</label>",
+      "</radio-group>"
+    ],
+    "description": "表单.单选框"
+  },
+  "we.form.slider": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.form.slider",
+    "body": [
+      "<slider @change=\"sliderChange\" min=\"${1:0}\" max=\"${2:100}\" show-value/>"
+    ],
+    "description": "表单.滑动选择器"
+  },
+  "we.form.switch": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.form.switch",
+    "body": [
+      "<switch checked=\"${1|true,false|}\" type=\"${2|switch, checkbox|}\" color=\"$3\" @change=\"switchChange\"/>"
+    ],
+    "description": "表单.开关选择器"
+  },
+  "we.form.textarea": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.form.textarea",
+    "body": [
+      " <textarea @blur=\"bindTextAreaBlur\" value=\"$1\" placeholder=\"${2:占位符}\" auto-height=\"${3|true,false|}\" />"
+    ],
+    "description": "表单.多行输入框"
+  },
+  "we.navgator": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.navgator",
+    "body": [
+      "<navigator url=\"{{$1}}\" open-type=\"${2|navigate,redirect,switchTab,reLaunch,navigateBack|}\"></navigator>"
+    ],
+    "description": "导航"
+  },
+  "we.image": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.image",
+    "body": [
+      "<image src=\"{{$1}}\" mode=\"${2|scaleToFill,aspectFit,aspectFill,widthFix,top,bottom,center,left,right,top left,top right,bottom left,bottom right|}\" lazy-load=\"${3:false}\"></image>"
+    ],
+    "description": "图片"
+  },
+  "we.video": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.video",
+    "body": [
+      "<video src=\"{{$1}}\"  controls=\"${2:true}\" autoplay=\"${3:true}\" loop=\"${4:true}\" objectFit=\"${5|contain,fill,cover|}\" @pause=\"pause\" @waiting=\"waiting\" @error=\"error\"></video>"
+    ],
+    "description": "视频"
+  },
+  "we.camera": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.camera",
+    "body": [
+      "<camera device-position=\"${1|back,front|}\" flash=\"${2|auto, on, off|}\"></camera>"
+    ],
+    "description": "相机"
+  },
+  "we.live-player": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.live-player",
+    "body": [
+      "<live-player src=\"{{${1:src}}}\" mode=\"${2|live,RTC|}\" autoplay=\"true\" object-fit=\"${3|contain,fillCrop|}\" @statechange=\"statechange\" @error=\"error\" />"
+    ],
+    "description": "实时音视频播放"
+  },
+  "we.live-pusher": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.live-pusher",
+    "body": [
+      "<live-pusher url=\"{{${1:url}}}\" mode=\"${2|SD,HD,FHD,RTC|}\" autopush=\"true\" @statechange=\"statechange\" />"
+    ],
+    "description": "实时音视频录制"
+  },
+  "we.web-view": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.web-view",
+    "body": [
+      "<web-view src=\"{{${1:src}}}\" @message=\"message\" ></web-view>"
+    ],
+    "description": "网页容器"
+  },
+  "we.open-data": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.open-data",
+    "body": [
+      "<open-data type=\"${1|groupName,userNickName,userAvatarUrl,userGender,userCity,userProvince,userCountry,userLanguage|}\"></open-data>"
+    ],
+    "description": "开放能力"
+  },
+  "we.map": {
+    "scope": "vue,html,vue-html,wpy",
+    "prefix": "we.map",
+    "body": [
+      "<map longitude=\"{{${1:longitude}}}\" latitude=\"{{${2:latitude}}}\"  scale=\"${3:16}\" markers=\"{{${4:markers}}}\" @tap=\"maptap\"></map>"
+    ],
+    "description": "地图"
+  }
+}
