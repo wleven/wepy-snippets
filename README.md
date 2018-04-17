@@ -2,10 +2,10 @@
 
 ## Features
 
-wepy 框架代码片段
+[wepy 框架代码片段](https://github.com/wleven/wepy-snippets)
 
-![feature X](images/1.png)
-![feature X](images/2.png)
+![feature X](https://raw.githubusercontent.com/wleven/wepy-snippets/master/images/1.png)
+![feature X](https://raw.githubusercontent.com/wleven/wepy-snippets/master/images/2.png)
 
 ## Extension Settings
 
