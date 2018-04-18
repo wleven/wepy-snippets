@@ -2,7 +2,7 @@
   "wepy.block": {
     "scope": "vue,html,vue-html,wpy",
     "prefix": "wepy.block",
-    "body": ["<block wx:if=\"{{${1:array}}}\" wx:key=\"\">", "", "</block>"],
+    "body": ["<block wx:for=\"{{${1:array}}}\" wx:key=\"\">", "$2", "</block>"],
     "description": "数组遍历"
   },
   "wepy.view": {
@@ -167,9 +167,9 @@
     "prefix": "wepy.form.checkbox",
     "body": [
       "<checkbox-group @change=\"checkboxChange\">",
-      "<label wx:for=\"{{${1:items}}}\">",
-      "<checkbox value=\"{{${2:item}.name}}\" checked=\"{{${2:item}.checked}}\"/>{{${2:item}.value}}",
-      "</label>",
+      "  <label wx:for=\"${1:id}\">",
+      "    <checkbox value=\"{{${2:item}.name}}\" checked=\"{{${2:item}.checked}}\" name=\"${1:id}\" />{{${2:item}.value}}",
+      "  </label>",
       "</checkbox-group>"
     ],
     "description": "表单.多选框"
