@@ -228,7 +228,7 @@
     "scope": "javascript,typescript",
     "prefix": "wepy.onShareAppMessage",
     "body": [
-      "onShareAppMessage({",
+      "onShareAppMessage(){",
       "  return {",
       "  title: '${1:自定义转发标题}',",
       "  path: '${2:/pages/index}',",
@@ -237,7 +237,7 @@
       "  fail:()=>{},",
       "  complete:()=>{},",
       "  }",
-      "})"
+      "}"
     ],
     "description": "在 Page 中定义 onShareAppMessage 函数，设置该页面的转发信息"
   },
