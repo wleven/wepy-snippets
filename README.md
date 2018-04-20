@@ -19,10 +19,11 @@
 
 ## 更新日志
 
+* 修复 `wepy.swiper`
+* 修复 `wepy.onShareAppMessage(){}`
 * 增加 `wepy.repeat` 代替 `wepy.block`
 
   ```
   <repeat for="{{data}}" key="index" index="index" item="item">
   </repeat>
   ```
-* 修复 `wepy.onShareAppMessage(){}`
