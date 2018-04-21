@@ -1,8 +1,7 @@
-# wepy snippets README
+# wepy 框架代码片段
 
-## 预览
 
-[wepy 框架代码片段](https://github.com/wleven/wepy-snippets)
+[Github,欢迎star,欢迎issues](https://github.com/wleven/wepy-snippets)
 
 ![feature X](https://raw.githubusercontent.com/wleven/wepy-snippets/master/images/1.png)
 
@@ -18,7 +17,7 @@
 
 
 ## 更新日志
-
+* 修复 `wepy.getUserInfo(),wepy.showModal()`
 * 修复 `wepy.swiper`
 * 修复 `wepy.onShareAppMessage(){}`
 * 增加 `wepy.repeat` 代替 `wepy.block`

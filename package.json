@@ -2,7 +2,7 @@
   "name": "wepy-snippets",
   "displayName": "wepy snippets",
   "description": "小程序wepy框架代码片段",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "publisher": "wleven",
   "icon": "images/logo.png",
   "engines": {
