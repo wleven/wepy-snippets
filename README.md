@@ -17,6 +17,8 @@
 
 
 ## 更新日志
+* 修复 `navigator`
+* 修复 `wepy.wepy.onShareAppMessage()`
 * 修复 `wepy.getUserInfo(),wepy.showModal()`
 * 修复 `wepy.swiper`
 * 修复 `wepy.onShareAppMessage(){}`

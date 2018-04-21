@@ -296,7 +296,7 @@
     "scope": "vue,html,vue-html,wpy",
     "prefix": "wepy.navgator",
     "body": [
-      "<navigator url=\"{{$1}}\" open-type=\"${2|navigate,redirect,switchTab,reLaunch,navigateBack|}\"></navigator>"
+      "<navigator url=\"{{$1}}\" open-type=\"${2|navigate,redirect,switchTab,reLaunch,navigateBack|}\" hover-class=\"none\"></navigator>"
     ],
     "description": "导航"
   },
