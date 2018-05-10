@@ -1,0 +1,147 @@
+{
+  "wepy.page": {
+    "description": "快速添加页面代码"
+  },
+  "wepy.component": {
+    "description": "快速组件代码"
+  },
+  "wepy.block": {
+    "description": "循环渲染"
+  },
+  "wepy.repeat": {
+    "description": "循环渲染 代替block"
+  },
+  "wepy.view": {
+    "body": ["<view>{{$1}}</view>"],
+    "description": "视图容器"
+  },
+  "wepy.view.tap": {
+    "body": ["<view @tap=\"$1\">{{$2}}</view>"],
+    "description": "视图容器-事件"
+  },
+  "wepy.view.all": {
+    "description": "视图容器-全部"
+  },
+  "wepy.scroll-view": {
+    "body": ["<scroll-view>$1</scroll-view>"],
+    "description": "可滚动视图区域"
+  },
+  "wepy.scroll-view.x": {
+    "description": "可滚动视图区域-横向"
+  },
+  "wepy.scroll-view.y": {
+    "description": "可滚动视图区域-纵向"
+  },
+  "wepy.scroll-view.all": {
+    "description": "可滚动视图区域-全部"
+  },
+  "wepy.swiper": {
+    "description": "可滚动视图区域-全部"
+  },
+  "wepy.icon": {
+    "description": "图标"
+  },
+  "wepy.rich-text.node": {
+    "body": ["<rich-text type=\"node\" nodes=\"{{$1}}\"></rich-text>"],
+    "description": "富文本"
+  },
+  "wepy.rich-text.text": {
+    "body": ["<rich-text type=\"text\" nodes=\"{{$1}}\"></rich-text>"],
+    "description": "富文本"
+  },
+  "wepy.progress": {
+    "description": "进度条"
+  },
+  "wepy.form": {
+    "description": "表单"
+  },
+  "wepy.form.button": {
+    "description": "表单"
+  },
+  "wepy.form.button.contact": {
+    "description": "表单.打开客服会话"
+  },
+  "wepy.form.button.contact.card": {
+    "description": "表单.打开客服会话 显示消息卡片"
+  },
+  "wepy.form.button.share": {
+    "description": "表单.触发用户转发"
+  },
+  "wepy.form.button.getUserInfo": {
+    "description": "表单.获取用户信息,可以从bindgetuserinfo回调中获取到用户信息"
+  },
+  "wepy.form.button.getPhoneNumber": {
+    "description":
+      "表单.获取用户手机号,可以从bindgetphonenumber回调中获取到用户信息"
+  },
+  "wepy.form.button.launchApp": {
+    "description": "表单.打开APP,可以通过app-parameter属性设定向APP传的参数"
+  },
+  "wepy.form.checkbox": {
+    "description": "表单.多选框"
+  },
+  "wepy.form.input": {
+    "description": "表单.输入框"
+  },
+  "wepy.form.lable": {
+    "body": ["<lable for=\"$1\">$2</lable>"],
+    "description": "表单.标签"
+  },
+  "wepy.form.picker.selector": {
+    "description": "表单.选择器.普通"
+  },
+  "wepy.form.picker.multiSelector": {
+    "description": "表单.选择器.多列选择"
+  },
+  "wepy.form.picker.time": {
+    "description": "表单.选择器.时间选择"
+  },
+  "wepy.form.picker.date": {
+    "description": "表单.选择器.日期选择"
+  },
+  "wepy.form.picker.region": {
+    "description": "表单.选择器.省市区选择"
+  },
+  "wepy.form.picker-view": {
+    "description": "表单.嵌入页面的滚动选择器"
+  },
+  "wepy.form.radio": {
+    "description": "表单.单选框"
+  },
+  "wepy.form.slider": {
+    "description": "表单.滑动选择器"
+  },
+  "wepy.form.switch": {
+    "description": "表单.开关选择器"
+  },
+  "wepy.form.textarea": {
+    "description": "表单.多行输入框"
+  },
+  "wepy.navigator": {
+    "description": "导航"
+  },
+  "wepy.image": {
+    "description": "图片"
+  },
+  "wepy.video": {
+    "description": "视频"
+  },
+  "wepy.camera": {
+    "description": "相机"
+  },
+  "wepy.live-player": {
+    "description": "实时音视频播放"
+  },
+  "wepy.live-pusher": {
+    "description": "实时音视频录制"
+  },
+  "wepy.web-view": {
+    "description": "网页容器"
+  },
+  "wepy.open-data": {
+    "description": "开放能力"
+  },
+  "wepy.map": {
+    "description": "地图"
+  }
+}
