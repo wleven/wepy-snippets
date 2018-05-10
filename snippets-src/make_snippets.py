@@ -94,7 +94,9 @@ def main():
     make_snippets('vue.json',{
         "scope": "vue,html,vue-html,wpy"
     })
-    make_snippets('api.json')
+    make_snippets('api.json', {
+        "scope": "javascript,typescript"
+    })
 
 if __name__ == '__main__':
     main()

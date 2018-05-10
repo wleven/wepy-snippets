@@ -146,13 +146,13 @@
   },
   "wepy.connectSocket": {
     "body": [
-      "wepy.connectSocket({",
-      "  url:'${1:url}',//开发者服务器接口地址，必须是 wss 协议，且域名必须是后台配置的合法域名",
-      "  method:'${2:get}',//有效值：OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT",
-      "  protocols:${3:protocols},//子协议数组",
-      "  success:(res)=>{},",
-      "  fail:()=>{},",
-      "  complete:()=>{},",
+      "wepy.uploadFile({,",
+      "  url: '${1:url}',//开发者服务器接口地址，必须是 wss 协议，且域名必须是后台配置的合法域名",
+      "  method: '${2:get}',//有效值：OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT",
+      "  protocols: ${ 3: protocols },//子协议数组",
+      "  success: (res) => { },",
+      "  fail: () => { },",
+      "  complete: () => { },",
       "})"
     ],
     "description": "创建Socket连接",
@@ -194,12 +194,12 @@
   },
   "wepy.downloadFile": {
     "body": [
-      "wepy.downloadFile({",
-      "  url:'${1:url}',//下载资源的 url",
-      "  success:(res)=>{},",
-      "  fail:()=>{},",
-      "  complete:()=>{},",
-      "})"
+      "wepy.uploadFile({,",
+      "  url: '${1:url}',// 下载资源的 url",
+      "  success: (res) => { },",
+      "  fail: () => { },",
+      "  complete: () => { },",
+      "  })"
     ],
     "description": "文件下载",
     "prefix": "wepy.downloadFile",
@@ -748,7 +748,9 @@
   },
   "wepy.onSocketError": {
     "body": [
-      "wepy.onSocketError((res)=>{ console.log('WebSocket连接打开失败，请检查！')})"
+      "wepy.onSocketError((res)=>{",
+      "   console.log('WebSocket连接打开失败，请检查！')",
+      "})"
     ],
     "description": "监听WebSocket错误",
     "prefix": "wepy.onSocketError",
@@ -756,7 +758,9 @@
   },
   "wepy.onSocketMessage": {
     "body": [
-      "wepy.onSocketMessage((res)=>{console.log('收到服务器内容：' + res.data)})"
+      "wepy.onSocketMessage((res)=>{",
+      "    console.log('收到服务器内容：' + res.data)",
+      "})"
     ],
     "description": "监听WebSocket接受到服务器的消息事件",
     "prefix": "wepy.onSocketMessage",
@@ -764,7 +768,9 @@
   },
   "wepy.onSocketOpen": {
     "body": [
-      "wepy.onSocketOpen((res)=>{ console.log('WebSocket连接已打开！')})"
+      "wepy.onSocketOpen((res)=> {",
+      "   console.log('WebSocket连接已打开！')",
+      "})"
     ],
     "description": "监听WebSocket连接打开事件",
     "prefix": "wepy.onSocketOpen",
@@ -941,14 +947,14 @@
   },
   "wepy.request": {
     "body": [
-      "wepy.request({",
-      "  url:'${1:url}',//开发者服务器接口地址",
-      "  data:'${2:data}',//请求的参数",
-      "  method:'${3|GET,OPTIONS, HEAD, POST, PUT, DELETE, TRACE, CONNECT|}',",
-      "  dataType:'${4:json}',//如果设为json，会尝试对返回的数据做一次 JSON.parse",
-      "  success:(res)=>{},",
-      "  fail:()=>{},",
-      "  complete:()=>{},",
+      "wepy.request({,",
+      "  url: '${1:url}',//开发者服务器接口地址\",",
+      "  data: '${2:data}',//请求的参数\",",
+      "  method: '${3|GET,OPTIONS, HEAD, POST, PUT, DELETE, TRACE, CONNECT|}',",
+      "  dataType: '${4:json}',//如果设为json，会尝试对返回的数据做一次 JSON.parse",
+      "  success: (res) => { },",
+      "  fail: () => { },",
+      "  complete: () => { },",
       "})"
     ],
     "description": "网络请求",
@@ -1021,10 +1027,10 @@
   "wepy.sendSocketMessage": {
     "body": [
       "wepy.sendSocketMessage({",
-      "  data:${1:data},//需要发送的内容",
-      "  success:(res)=>{},",
-      "  fail:()=>{},",
-      "  complete:()=>{},",
+      "  data: ${ 1: data },//需要发送的内容",
+      "  success: (res) => { },",
+      "  fail: () => { },",
+      "  complete: () => { },",
       "})"
     ],
     "description": "通过 WebSocket 连接发送数据，需要先 wepy.connectSocket，并在 wepy.onSocketOpen 回调之后才能发送",
@@ -1421,14 +1427,14 @@
   },
   "wepy.uploadFile": {
     "body": [
-      "wepy.uploadFile({",
-      "  url:'${1:url}',//开发者服务器 url",
-      "  filePath:'${2:filePath}',//要上传文件资源的路径",
-      "  name:${3:name},//文件对应的 key , 开发者在服务器端通过这个 key 可以获取到文件二进制内容",
-      "  success:(res)=>{},",
-      "  fail:()=>{},",
-      "  complete:()=>{},",
-      "})"
+      "wepy.uploadFile({,",
+      "  url: '${1:url}',//开发者服务器 url",
+      "  filePath: '${2:filePath}',//要上传文件资源的路径",
+      "  name: ${ 3: name },//文件对应的 key , 开发者在服务器端通过这个 key 可以获取到文件二进制内容",
+      "  success: (res) => { },",
+      "  fail: () => { },",
+      "  complete: () => { },",
+      "  })"
     ],
     "description": "文件上传",
     "prefix": "wepy.uploadFile",
