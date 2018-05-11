@@ -28,7 +28,7 @@ def load_raw_snippets(src):
     with codecs.open(src, encoding='utf-8') as fin:
         return json.load(fin, encoding='utf-8', parse_float=False)
 
-def include_snippets_body(snippet, key):
+def include_snippets_body(snippet, key, includes_dir):
     # if we did not specify the body field
     # then using the key as the filenameWithoutSuffix
     # then find a matching file in `includes` dir.
@@ -46,9 +46,9 @@ def include_snippets_body(snippet, key):
             return
     else:
         # find first matching file
-        for filename in os.listdir('includes'):
+        for filename in os.listdir(includes_dir):
             filenameWithoutSuffix = filename.rsplit('.', 1)[0]
-            fpath =  os.path.join('includes', filename)
+            fpath =  os.path.join(includes_dir, filename)
             if filenameWithoutSuffix == key and os.path.isfile(fpath):
                 filepath = fpath
                 break
@@ -72,7 +72,7 @@ def merge_snippet_options(snippet, options):
     result_dict.update(snippet)
     snippet.update(result_dict)
 
-def make_snippets(src, global_options=None):
+def make_snippets(src, includes_dir="includes", global_options=None):
     work_dir = os.path.abspath(__file__)
     if not os.path.exists(src):
         log_error("Failed to find file: %s/%s" % (work_dir,src))
@@ -80,7 +80,7 @@ def make_snippets(src, global_options=None):
     snippets_dict = load_raw_snippets(src)
     for (key,snippet) in snippets_dict.iteritems():
        ensure_snippet_prefix(snippet, key)
-       include_snippets_body(snippet, key)
+       include_snippets_body(snippet, key, includes_dir)
        if global_options:
            merge_snippet_options(snippet, global_options)
 
@@ -91,10 +91,10 @@ def make_snippets(src, global_options=None):
     log_success("Make snippets %s done!\n" % src)
 
 def main():
-    make_snippets('vue.json',{
+    make_snippets('vue.json', includes_dir="includes/wepy", global_options={
         "scope": "vue,html,vue-html,wpy"
     })
-    make_snippets('api.json', {
+    make_snippets('api.json', includes_dir="includes/wx", global_options={
         "scope": "javascript,typescript"
     })
 
