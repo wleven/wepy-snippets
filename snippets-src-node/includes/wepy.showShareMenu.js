@@ -1,0 +1,1 @@
+wepy.showShareMenu({ withShareTicket: true });

@@ -1,0 +1,1 @@
+wepy.closeBluetoothAdapter({ success: res => {} });

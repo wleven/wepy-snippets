@@ -33,7 +33,12 @@
   </repeat>
   ```
 
-## 注意
+
+## NodeJs 构建
+模块化构建代码片段 `npm run build`
+
+
+## Python 构建
 现在 snippets 目录中的代码片段配置由 snippets-src 中的定义的源文件经过 `make_snippets.py` 脚本生成。
 也可以直接在此项目根目录运行 `make_snippets.sh` 生成。
 

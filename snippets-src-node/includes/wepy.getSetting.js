@@ -1,0 +1,1 @@
+wepy.getSetting({ success: res => {} });

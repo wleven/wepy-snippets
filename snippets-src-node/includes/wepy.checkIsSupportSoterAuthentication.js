@@ -1,0 +1,3 @@
+wepy.checkIsSupportSoterAuthentication({
+  success: res => {}
+});

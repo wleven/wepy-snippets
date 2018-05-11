@@ -1,0 +1,1 @@
+wepy.stopWifi({ success: res => {} });

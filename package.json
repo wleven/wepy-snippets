@@ -2,7 +2,7 @@
   "name": "wepy-snippets",
   "displayName": "wepy snippets",
   "description": "小程序wepy框架代码片段",
-  "version": "0.1.0",
+  "version": "1.5.12",
   "publisher": "wleven",
   "icon": "images/logo.png",
   "engines": {
@@ -18,5 +18,8 @@
       { "language": "javascript", "path": "./snippets/api.json" },
       { "language": "typescript", "path": "./snippets/api.json" }
     ]
-  }
+  },
+    "scripts": {
+      "build": "node  ./snippets-src-node/index.js"
+    }
 }

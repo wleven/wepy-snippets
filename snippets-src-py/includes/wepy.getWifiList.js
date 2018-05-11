@@ -1,0 +1,3 @@
+wepy.getWifiList({
+  success: res => {}
+});

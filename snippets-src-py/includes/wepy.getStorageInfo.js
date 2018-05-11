@@ -1,0 +1,1 @@
+wepy.getStorageInfo({ success: res => {} });

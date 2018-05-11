@@ -1,0 +1,1 @@
+wepy.getExtConfig({ success: res => {} });
