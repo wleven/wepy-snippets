@@ -15,6 +15,10 @@
       { "language": "html", "path": "./snippets/vue.json" },
       { "language": "vue-html", "path": "./snippets/vue.json" },
       { "language": "wpy", "path": "./snippets/vue.json" },
+      { "language": "vue", "path": "./snippets/weui.json" },
+      { "language": "html", "path": "./snippets/weui.json" },
+      { "language": "vue-html", "path": "./snippets/weui.json" },
+      { "language": "wpy", "path": "./snippets/weui.json" },
       { "language": "javascript", "path": "./snippets/api.json" },
       { "language": "typescript", "path": "./snippets/api.json" }
     ]

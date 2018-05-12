@@ -21,8 +21,7 @@ export default class Example extends wepy.component {
   computed = {};
 
   onLoad() {};
-  
-  onShow() {};
+
 }
 </script>
 

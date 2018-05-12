@@ -94,6 +94,9 @@ def main():
     make_snippets('vue.json', includes_dir="includes/wepy", global_options={
         "scope": "vue,html,vue-html,wpy"
     })
+    make_snippets('weui.json', includes_dir="includes/weui", global_options={
+        "scope": "vue,html,vue-html,wpy"
+    })
     make_snippets('api.json', includes_dir="includes/wx", global_options={
         "scope": "javascript,typescript"
     })
