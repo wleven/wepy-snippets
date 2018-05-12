@@ -1,8 +1,8 @@
 {
   "name": "wepy-snippets",
   "displayName": "wepy snippets",
-  "description": "小程序wepy框架代码片段",
-  "version": "1.5.12",
+  "description": "微信小程序wepy框架,weui框架代码片段",
+  "version": "1.5.13",
   "publisher": "wleven",
   "icon": "images/logo.png",
   "engines": {
@@ -11,12 +11,16 @@
   "categories": ["Snippets"],
   "contributes": {
     "snippets": [
-      { "language": "vue", "path": "./snippets/vue.json" },
-      { "language": "html", "path": "./snippets/vue.json" },
-      { "language": "vue-html", "path": "./snippets/vue.json" },
-      { "language": "wpy", "path": "./snippets/vue.json" },
-      { "language": "javascript", "path": "./snippets/api.json" },
-      { "language": "typescript", "path": "./snippets/api.json" }
+      { "language": "vue", "path": "./snippets/wepy_html.json" },
+      { "language": "html", "path": "./snippets/wepy_html.json" },
+      { "language": "vue-html", "path": "./snippets/wepy_html.json" },
+      { "language": "wpy", "path": "./snippets/wepy_html.json" },
+      { "language": "vue", "path": "./snippets/weui.json" },
+      { "language": "html", "path": "./snippets/weui.json" },
+      { "language": "vue-html", "path": "./snippets/weui.json" },
+      { "language": "wpy", "path": "./snippets/weui.json" },
+      { "language": "javascript", "path": "./snippets/wepy_api.json" },
+      { "language": "typescript", "path": "./snippets/wepy_api.json" }
     ]
   },
     "scripts": {

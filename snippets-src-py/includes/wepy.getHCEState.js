@@ -1,1 +1,0 @@
-wepy.getHCEState({ success: res => {} });

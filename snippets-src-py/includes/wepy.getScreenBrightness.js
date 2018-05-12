@@ -1,1 +1,0 @@
-wepy.getScreenBrightness({ success: res => {} });

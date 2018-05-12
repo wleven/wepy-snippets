@@ -1,1 +1,0 @@
-wepy.startWifi({ success: res => {} });
