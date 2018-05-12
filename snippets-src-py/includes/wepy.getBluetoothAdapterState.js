@@ -1,1 +1,0 @@
-wepy.getBluetoothAdapterState({ success: res => {} });

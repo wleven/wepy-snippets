@@ -1,1 +1,0 @@
-wepy.navigateBackMiniProgram({ success: res => {} });

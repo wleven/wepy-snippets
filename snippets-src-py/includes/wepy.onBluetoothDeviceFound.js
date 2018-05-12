@@ -1,1 +1,0 @@
-wepy.onBluetoothDeviceFound(res => {});

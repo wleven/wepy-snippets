@@ -1,1 +1,0 @@
-wepy.getConnectedWifi({ success: res => {} });

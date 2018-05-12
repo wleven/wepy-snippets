@@ -1,4 +1,4 @@
-# wepy 框架代码片段
+# wepy weui 框架代码片段
 
 
 [Github,欢迎star,欢迎issues](https://github.com/wleven/wepy-snippets)

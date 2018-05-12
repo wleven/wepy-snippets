@@ -1,1 +1,0 @@
-wepy.onAccelerometerChange(res => {});

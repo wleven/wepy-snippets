@@ -1,1 +1,0 @@
-wepy.getSystemInfo({ success: res => {} });

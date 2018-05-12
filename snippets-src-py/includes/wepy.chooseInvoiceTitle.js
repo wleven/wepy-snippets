@@ -1,1 +1,0 @@
-wepy.chooseInvoiceTitle({ success: res => {} });
