@@ -16,7 +16,7 @@
 * 代码片段关键词 `wepy`
 * 将 `wpy` 文件格式设置为 `vue,vue-html,html`
 * 支持 `javascript,typescript`
-* vsce publish
+
 
 
 
