@@ -56,7 +56,7 @@ def include_snippets_body(snippet, key, includes_dir):
             log_error("Failed to find includes default file key=%s" % key )
             return
 
-    lines = [] 
+    lines = []
     for line in  codecs.open(filepath, encoding='utf-8').readlines():
         lineWithNewline = line.rstrip()
         lines.append(lineWithNewline)
@@ -73,18 +73,19 @@ def merge_snippet_options(snippet, options):
     snippet.update(result_dict)
 
 def make_snippets(src, includes_dir="includes", global_options=None):
-    work_dir = os.path.abspath(__file__)
-    if not os.path.exists(src):
-        log_error("Failed to find file: %s/%s" % (work_dir,src))
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    src_path = os.path.join(script_dir,src)
+    if not os.path.exists(src_path):
+        log_error("Failed to find file: %s/%s" % (script_dir,src))
         return
-    snippets_dict = load_raw_snippets(src)
+    snippets_dict = load_raw_snippets(src_path)
     for (key,snippet) in snippets_dict.iteritems():
        ensure_snippet_prefix(snippet, key)
        include_snippets_body(snippet, key, includes_dir)
        if global_options:
            merge_snippet_options(snippet, global_options)
 
-    snippets_dest = os.path.join('../snippets',src)
+    snippets_dest = os.path.join(script_dir, '..', 'snippets', src)
     with codecs.open(snippets_dest, mode='w', encoding='utf-8') as fout:
         json.dump(snippets_dict, fout, ensure_ascii=False, encoding='utf-8',indent=2, sort_keys=True)
 
