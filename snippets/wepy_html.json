@@ -1,5 +1,62 @@
 {
+  "wepy.page": {
+    "description": "快速添加页面代码",
+    "prefix": "wepy.page",
+    "body": [
+      "<!-- $0 -->",
+      "<template>",
+      "  <view class='container'></view>",
+      "</template>",
+      "<script>",
+      "import wepy from 'wepy';",
+      "export default class Example extends wepy.page {",
+      "  config = {",
+      "          navigationBarTitleText: \"\",",
+      "  };",
+      "  data = {};",
+      "  components = {};",
+      "  methods = {};",
+      "  events = {};",
+      "  watch = {};",
+      "  computed = {};",
+      "  onLoad() {};",
+      "  onShow() {};",
+      "}",
+      "</script>",
+      "<style lang='scss'>",
+      "</style>"
+    ],
+    "scope": "vue, html, vue-html, wpy"
+  },
+  "wepy.component": {
+    "description": "快速组件代码",
+    "prefix": "wepy.component",
+    "body": [
+      "<!-- $0 -->",
+      "<template>",
+      "  <view class='container'></view>",
+      "</template>",
+      "<script>",
+      "import wepy from 'wepy';",
+      "export default class Example extends wepy.component {",
+      "  props = {};",
+      "  data = {};",
+      "  components = {};",
+      "  methods = {};",
+      "  events = {};",
+      "  watch = {};",
+      "  computed = {};",
+      "  onLoad() {};",
+      "}",
+      "</script>",
+      "<style lang='scss'>",
+      "</style>"
+    ],
+    "scope": "vue, html, vue-html, wpy"
+  },
   "wepy.block": {
+    "description": "循环渲染",
+    "prefix": "wepy.block",
     "body": [
       "<block",
       "  wx:for=\"{{${1:array}}}\"",
@@ -7,73 +64,182 @@
       "  $2",
       "</block>"
     ],
-    "description": "循环渲染",
-    "prefix": "wepy.block",
-    "scope": "vue,html,vue-html,wpy"
+    "scope": "vue, html, vue-html, wpy"
   },
-  "wepy.camera": {
+  "wepy.repeat": {
+    "description": "循环渲染 代替block",
+    "prefix": "wepy.repeat",
     "body": [
-      " <camera",
-      "  device-position=\"${1|back,front|}\"",
-      "  flash=\"${2|auto, on, off|}\">",
-      "</camera>"
+      "<repeat",
+      "    for=\"{{${1:array}}}\"",
+      "    key=\"${2:index}\"",
+      "    index=\"${2:index}\"",
+      "    item=\"${3:item}\">",
+      "    $4",
+      "</repeat>"
     ],
-    "description": "相机",
-    "prefix": "wepy.camera",
-    "scope": "vue,html,vue-html,wpy"
+    "scope": "vue, html, vue-html, wpy"
   },
-  "wepy.component": {
+  "wepy.view": {
     "body": [
-      "<!-- $0 -->",
-      "<template>",
-      "  <view class='container'></view>",
-      "</template>",
-      "",
-      "<script>",
-      "import wepy from 'wepy';",
-      "export default class Example extends wepy.component {",
-      "  props = {};",
-      "",
-      "  data = {};",
-      "",
-      "  components = {};",
-      "",
-      "  methods = {};",
-      "",
-      "  events = {};",
-      "",
-      "  watch = {};",
-      "",
-      "  computed = {};",
-      "",
-      "  onLoad() {};",
-      "",
-      "}",
-      "</script>",
-      "",
-      "<style lang='scss'>",
-      "</style>",
-      ""
+      "<view>{{$1}}</view>"
     ],
-    "description": "快速组件代码",
-    "prefix": "wepy.component",
-    "scope": "vue,html,vue-html,wpy"
+    "description": "视图容器",
+    "prefix": "wepy.view",
+    "scope": "vue, html, vue-html, wpy"
+  },
+  "wepy.view.tap": {
+    "body": [
+      "<view @tap=\"$1\">{{$2}}</view>"
+    ],
+    "description": "视图容器-事件",
+    "prefix": "wepy.view.tap",
+    "scope": "vue, html, vue-html, wpy"
+  },
+  "wepy.view.all": {
+    "description": "视图容器-全部",
+    "prefix": "wepy.view.all",
+    "body": [
+      "<view",
+      "  hover-class=\"{{$1}}\"",
+      "  hover-stop-propagation=\"{{$2}}\"",
+      "  hover-start-time=\"{{$3}}\"",
+      "  hover-stay-time=\"{{$4}}\"",
+      "  @tap=\"$5\">",
+      "  {{$6}}",
+      "</view>"
+    ],
+    "scope": "vue, html, vue-html, wpy"
+  },
+  "wepy.scroll-view": {
+    "body": [
+      "<scroll-view>$1</scroll-view>"
+    ],
+    "description": "可滚动视图区域",
+    "prefix": "wepy.scroll-view",
+    "scope": "vue, html, vue-html, wpy"
+  },
+  "wepy.scroll-view.x": {
+    "description": "可滚动视图区域-横向",
+    "prefix": "wepy.scroll-view.x",
+    "body": [
+      " <scroll-view",
+      "  scroll-x",
+      "  scroll-with-animation",
+      "  @scroll=\"$1\"",
+      "  >",
+      "  $2",
+      "</scroll-view>"
+    ],
+    "scope": "vue, html, vue-html, wpy"
+  },
+  "wepy.scroll-view.y": {
+    "description": "可滚动视图区域-纵向",
+    "prefix": "wepy.scroll-view.y",
+    "body": [
+      " <scroll-view",
+      "  scroll-y",
+      "  scroll-with-animation",
+      "  @scroll=\"$1\"",
+      "  >",
+      "  $2",
+      "</scroll-view>"
+    ],
+    "scope": "vue, html, vue-html, wpy"
+  },
+  "wepy.scroll-view.all": {
+    "description": "可滚动视图区域-全部",
+    "prefix": "wepy.scroll-view.all",
+    "body": [
+      " <scroll-view",
+      "  scroll-x",
+      "  scroll-y",
+      "  scroll-with-animation",
+      "  upper-threshold=\"50\"",
+      "  lower-threshold=\"50\"",
+      "  scroll-top=\"$1\"",
+      "  scroll-left=\"$2\"",
+      "  @scrolltoupper=\"$3\"",
+      "  @scrolltolower=\"$4\"",
+      "  @scroll=\"$5\"",
+      "  >",
+      "  $6",
+      "</scroll-view>"
+    ],
+    "scope": "vue, html, vue-html, wpy"
+  },
+  "wepy.swiper": {
+    "description": "可滚动视图区域-全部",
+    "prefix": "wepy.swiper",
+    "body": [
+      "<swiper indicator-dots autoplay circular>",
+      "    <block wx:for=\"{{${1:items}}}\" wx:key=\"\">",
+      "        <swiper-item>",
+      "            <image mode=\"${2:aspectFill}\" src=\"{{${3:item}.src}}\"></image>",
+      "        </swiper-item>",
+      "    </block>",
+      "</swiper>"
+    ],
+    "scope": "vue, html, vue-html, wpy"
+  },
+  "wepy.icon": {
+    "description": "图标",
+    "prefix": "wepy.icon",
+    "body": [
+      "<icon",
+      "  type=\"${1| success, success_no_circle, info, warn, waiting, cancel, download, search, clear|}\"",
+      "  size=\"${2:24}\">",
+      "</icon>"
+    ],
+    "scope": "vue, html, vue-html, wpy"
+  },
+  "wepy.rich-text.node": {
+    "body": [
+      "<rich-text type=\"node\" nodes=\"{{$1}}\"></rich-text>"
+    ],
+    "description": "富文本",
+    "prefix": "wepy.rich-text.node",
+    "scope": "vue, html, vue-html, wpy"
+  },
+  "wepy.rich-text.text": {
+    "body": [
+      "<rich-text type=\"text\" nodes=\"{{$1}}\"></rich-text>"
+    ],
+    "description": "富文本",
+    "prefix": "wepy.rich-text.text",
+    "scope": "vue, html, vue-html, wpy"
+  },
+  "wepy.progress": {
+    "description": "进度条",
+    "prefix": "wepy.progress",
+    "body": [
+      "<progress",
+      "  percent=\"${1:0}\"",
+      "  show-info=\"${2:true}\"",
+      "  stroke-width=\"${3:6}\"",
+      "  color=\"${4:#09BB07}\"",
+      "  active=\"${5:true}\"",
+      "  >",
+      "</progress>\""
+    ],
+    "scope": "vue, html, vue-html, wpy"
   },
   "wepy.form": {
+    "description": "表单",
+    "prefix": "wepy.form",
     "body": [
       "<form",
       "  report-submit=\"${1:true}\"",
       "  @submit=\"${2:submit}\"",
       "  @reset=\"${3:reset}\"",
       "  >",
-      "",
       "</form>"
     ],
-    "description": "表单",
-    "prefix": "wepy.form",
-    "scope": "vue,html,vue-html,wpy"
+    "scope": "vue, html, vue-html, wpy"
   },
   "wepy.form.button": {
+    "description": "表单",
+    "prefix": "wepy.form.button",
     "body": [
       "<button",
       "  size=\"${1|defult,mini|}\"",
@@ -84,11 +250,11 @@
       "  $5",
       "</button>"
     ],
-    "description": "表单",
-    "prefix": "wepy.form.button",
-    "scope": "vue,html,vue-html,wpy"
+    "scope": "vue, html, vue-html, wpy"
   },
   "wepy.form.button.contact": {
+    "description": "表单.打开客服会话",
+    "prefix": "wepy.form.button.contact",
     "body": [
       "<button",
       "  size=\"${1|defult,mini|}\"",
@@ -101,11 +267,11 @@
       "  $5",
       "</button>"
     ],
-    "description": "表单.打开客服会话",
-    "prefix": "wepy.form.button.contact",
-    "scope": "vue,html,vue-html,wpy"
+    "scope": "vue, html, vue-html, wpy"
   },
   "wepy.form.button.contact.card": {
+    "description": "表单.打开客服会话 显示消息卡片",
+    "prefix": "wepy.form.button.contact.card",
     "body": [
       "<button",
       "  size=\"${1|defult,mini|}\"",
@@ -123,28 +289,27 @@
       "  $9",
       "</button>"
     ],
-    "description": "表单.打开客服会话 显示消息卡片",
-    "prefix": "wepy.form.button.contact.card",
-    "scope": "vue,html,vue-html,wpy"
+    "scope": "vue, html, vue-html, wpy"
   },
-  "wepy.form.button.getPhoneNumber": {
+  "wepy.form.button.share": {
+    "description": "表单.触发用户转发",
+    "prefix": "wepy.form.button.share",
     "body": [
       "<button",
       "  size=\"${1|defult,mini|}\"",
       "  type=\"${2|defult,primary,warn|}\"",
       "  form-type=\"${3|submit,reset|}\"",
       "  disabled=\"${4|false,true|}\"",
-      "  open-type=\"getPhoneNumber\"",
-      "  @getphonenumber=\"getPhoneNumber\"",
+      "  open-type=\"share\"",
       "  >",
       "  $5",
       "</button>"
     ],
-    "description": "表单.获取用户手机号,可以从bindgetphonenumber回调中获取到用户信息",
-    "prefix": "wepy.form.button.getPhoneNumber",
-    "scope": "vue,html,vue-html,wpy"
+    "scope": "vue, html, vue-html, wpy"
   },
   "wepy.form.button.getUserInfo": {
+    "description": "表单.获取用户信息,可以从bindgetuserinfo回调中获取到用户信息",
+    "prefix": "wepy.form.button.getUserInfo",
     "body": [
       "<button",
       "  size=\"${1|defult,mini|}\"",
@@ -158,11 +323,28 @@
       "  $6",
       "</button>"
     ],
-    "description": "表单.获取用户信息,可以从bindgetuserinfo回调中获取到用户信息",
-    "prefix": "wepy.form.button.getUserInfo",
-    "scope": "vue,html,vue-html,wpy"
+    "scope": "vue, html, vue-html, wpy"
+  },
+  "wepy.form.button.getPhoneNumber": {
+    "description": "表单.获取用户手机号,可以从bindgetphonenumber回调中获取到用户信息",
+    "prefix": "wepy.form.button.getPhoneNumber",
+    "body": [
+      "<button",
+      "  size=\"${1|defult,mini|}\"",
+      "  type=\"${2|defult,primary,warn|}\"",
+      "  form-type=\"${3|submit,reset|}\"",
+      "  disabled=\"${4|false,true|}\"",
+      "  open-type=\"getPhoneNumber\"",
+      "  @getphonenumber=\"getPhoneNumber\"",
+      "  >",
+      "  $5",
+      "</button>"
+    ],
+    "scope": "vue, html, vue-html, wpy"
   },
   "wepy.form.button.launchApp": {
+    "description": "表单.打开APP,可以通过app-parameter属性设定向APP传的参数",
+    "prefix": "wepy.form.button.launchApp",
     "body": [
       "<button",
       "  size=\"${1|defult,mini|}\"",
@@ -174,27 +356,11 @@
       "  $6",
       "</button>"
     ],
-    "description": "表单.打开APP,可以通过app-parameter属性设定向APP传的参数",
-    "prefix": "wepy.form.button.launchApp",
-    "scope": "vue,html,vue-html,wpy"
-  },
-  "wepy.form.button.share": {
-    "body": [
-      "<button",
-      "  size=\"${1|defult,mini|}\"",
-      "  type=\"${2|defult,primary,warn|}\"",
-      "  form-type=\"${3|submit,reset|}\"",
-      "  disabled=\"${4|false,true|}\"",
-      "  open-type=\"share\"",
-      "  >",
-      "  $5",
-      "</button>"
-    ],
-    "description": "表单.触发用户转发",
-    "prefix": "wepy.form.button.share",
-    "scope": "vue,html,vue-html,wpy"
+    "scope": "vue, html, vue-html, wpy"
   },
   "wepy.form.checkbox": {
+    "description": "表单.多选框",
+    "prefix": "wepy.form.checkbox",
     "body": [
       "<checkbox-group @change=\"checkboxChange\">",
       "  <label wx:for=\"${1:id}\">",
@@ -206,11 +372,11 @@
       "      </label>",
       "</checkbox-group>"
     ],
-    "description": "表单.多选框",
-    "prefix": "wepy.form.checkbox",
-    "scope": "vue,html,vue-html,wpy"
+    "scope": "vue, html, vue-html, wpy"
   },
   "wepy.form.input": {
+    "description": "表单.输入框",
+    "prefix": "wepy.form.input",
     "body": [
       "<input",
       "  value=\"$1\"",
@@ -223,9 +389,7 @@
       "  $7",
       "</input>"
     ],
-    "description": "表单.输入框",
-    "prefix": "wepy.form.input",
-    "scope": "vue,html,vue-html,wpy"
+    "scope": "vue, html, vue-html, wpy"
   },
   "wepy.form.lable": {
     "body": [
@@ -233,39 +397,26 @@
     ],
     "description": "表单.标签",
     "prefix": "wepy.form.lable",
-    "scope": "vue,html,vue-html,wpy"
+    "scope": "vue, html, vue-html, wpy"
   },
-  "wepy.form.picker-view": {
-    "body": [
-      "<picker-view @change=\"bindChange\" value=\"{{${1:items}}}\">",
-      "  <picker-view-column>",
-      "    <view wx:for=\"{{${2:item}}}\">{{${2:item}}}</view>",
-      "  </picker-view-column>",
-      "</picker-view>\""
-    ],
-    "description": "表单.嵌入页面的滚动选择器",
-    "prefix": "wepy.form.picker-view",
-    "scope": "vue,html,vue-html,wpy"
-  },
-  "wepy.form.picker.date": {
+  "wepy.form.picker.selector": {
+    "description": "表单.选择器.普通",
+    "prefix": "wepy.form.picker.selector",
     "body": [
       "<picker",
-      "  mode=\"date\"",
       "  @change=\"bindPickerChange\"",
-      "  value=\"{{${1:date}}}\"",
-      "  start=\"2015-09-0\"",
-      "  end=\"2017-09-01\"",
-      "  >",
+      "  value=\"{{${1:index}}}\"",
+      "  range=\"{{${2:array}}}\">",
       "  <view class=\"picker\">",
-      "    当前选择：{{${1:date}}}",
+      "    当前选择：{{${2:array}[${1:index}]}}",
       "  </view>",
       "</picker>"
     ],
-    "description": "表单.选择器.日期选择",
-    "prefix": "wepy.form.picker.date",
-    "scope": "vue,html,vue-html,wpy"
+    "scope": "vue, html, vue-html, wpy"
   },
   "wepy.form.picker.multiSelector": {
+    "description": "表单.选择器.多列选择",
+    "prefix": "wepy.form.picker.multiSelector",
     "body": [
       " <picker",
       "  mode=\"multiSelector\"",
@@ -278,38 +429,11 @@
       "    </view>",
       "</picker>"
     ],
-    "description": "表单.选择器.多列选择",
-    "prefix": "wepy.form.picker.multiSelector",
-    "scope": "vue,html,vue-html,wpy"
-  },
-  "wepy.form.picker.region": {
-    "body": [
-      "<picker mode=\"region\" @change=\"bindPickerChange\" value=\"{{region}}\">",
-      "  <view class=\"picker\">",
-      "    当前选择：{{region[0]}},{{region[1]}},{{region[2]}}",
-      "  </view>",
-      "</picker>"
-    ],
-    "description": "表单.选择器.省市区选择",
-    "prefix": "wepy.form.picker.region",
-    "scope": "vue,html,vue-html,wpy"
-  },
-  "wepy.form.picker.selector": {
-    "body": [
-      "<picker",
-      "  @change=\"bindPickerChange\"",
-      "  value=\"{{${1:index}}}\"",
-      "  range=\"{{${2:array}}}\">",
-      "  <view class=\"picker\">",
-      "    当前选择：{{${2:array}[${1:index}]}}",
-      "  </view>",
-      "</picker>"
-    ],
-    "description": "表单.选择器.普通",
-    "prefix": "wepy.form.picker.selector",
-    "scope": "vue,html,vue-html,wpy"
+    "scope": "vue, html, vue-html, wpy"
   },
   "wepy.form.picker.time": {
+    "description": "表单.选择器.时间选择",
+    "prefix": "wepy.form.picker.time",
     "body": [
       "<picker",
       "  mode=\"time\"",
@@ -323,11 +447,53 @@
       "  </view>",
       "</picker>"
     ],
-    "description": "表单.选择器.时间选择",
-    "prefix": "wepy.form.picker.time",
-    "scope": "vue,html,vue-html,wpy"
+    "scope": "vue, html, vue-html, wpy"
+  },
+  "wepy.form.picker.date": {
+    "description": "表单.选择器.日期选择",
+    "prefix": "wepy.form.picker.date",
+    "body": [
+      "<picker",
+      "  mode=\"date\"",
+      "  @change=\"bindPickerChange\"",
+      "  value=\"{{${1:date}}}\"",
+      "  start=\"2015-09-0\"",
+      "  end=\"2017-09-01\"",
+      "  >",
+      "  <view class=\"picker\">",
+      "    当前选择：{{${1:date}}}",
+      "  </view>",
+      "</picker>"
+    ],
+    "scope": "vue, html, vue-html, wpy"
+  },
+  "wepy.form.picker.region": {
+    "description": "表单.选择器.省市区选择",
+    "prefix": "wepy.form.picker.region",
+    "body": [
+      "<picker mode=\"region\" @change=\"bindPickerChange\" value=\"{{region}}\">",
+      "  <view class=\"picker\">",
+      "    当前选择：{{region[0]}},{{region[1]}},{{region[2]}}",
+      "  </view>",
+      "</picker>"
+    ],
+    "scope": "vue, html, vue-html, wpy"
+  },
+  "wepy.form.picker-view": {
+    "description": "表单.嵌入页面的滚动选择器",
+    "prefix": "wepy.form.picker-view",
+    "body": [
+      "<picker-view @change=\"bindChange\" value=\"{{${1:items}}}\">",
+      "  <picker-view-column>",
+      "    <view wx:for=\"{{${2:item}}}\">{{${2:item}}}</view>",
+      "  </picker-view-column>",
+      "</picker-view>\""
+    ],
+    "scope": "vue, html, vue-html, wpy"
   },
   "wepy.form.radio": {
+    "description": "表单.单选框",
+    "prefix": "wepy.form.radio",
     "body": [
       "<radio-group class=\"radio-group\" @change=\"radioChange\">",
       "  <label class=\"radio\" wx:for=\"{{${1:items}}}\">",
@@ -339,11 +505,11 @@
       "  </label>",
       "</radio-group>"
     ],
-    "description": "表单.单选框",
-    "prefix": "wepy.form.radio",
-    "scope": "vue,html,vue-html,wpy"
+    "scope": "vue, html, vue-html, wpy"
   },
   "wepy.form.slider": {
+    "description": "表单.滑动选择器",
+    "prefix": "wepy.form.slider",
     "body": [
       " <slider",
       "  @change=\"sliderChange\"",
@@ -352,11 +518,11 @@
       "  show-value",
       "  />"
     ],
-    "description": "表单.滑动选择器",
-    "prefix": "wepy.form.slider",
-    "scope": "vue,html,vue-html,wpy"
+    "scope": "vue, html, vue-html, wpy"
   },
   "wepy.form.switch": {
+    "description": "表单.开关选择器",
+    "prefix": "wepy.form.switch",
     "body": [
       "<switch",
       "  checked=\"${1|true,false|}\"",
@@ -365,11 +531,11 @@
       "  @change=\"switchChange\"",
       "  />"
     ],
-    "description": "表单.开关选择器",
-    "prefix": "wepy.form.switch",
-    "scope": "vue,html,vue-html,wpy"
+    "scope": "vue, html, vue-html, wpy"
   },
   "wepy.form.textarea": {
+    "description": "表单.多行输入框",
+    "prefix": "wepy.form.textarea",
     "body": [
       " <textarea",
       "  @blur=\"bindTextAreaBlur\"",
@@ -378,76 +544,11 @@
       "  auto-height=\"${3|true,false|}\"",
       "  />"
     ],
-    "description": "表单.多行输入框",
-    "prefix": "wepy.form.textarea",
-    "scope": "vue,html,vue-html,wpy"
-  },
-  "wepy.icon": {
-    "body": [
-      "<icon",
-      "  type=\"${1| success, success_no_circle, info, warn, waiting, cancel, download, search, clear|}\"",
-      "  size=\"${2:24}\">",
-      "</icon>"
-    ],
-    "description": "图标",
-    "prefix": "wepy.icon",
-    "scope": "vue,html,vue-html,wpy"
-  },
-  "wepy.image": {
-    "body": [
-      "<image",
-      "  src=\"{{$1}}\"",
-      "  mode=\"${2|scaleToFill,aspectFit,aspectFill,widthFix,top,bottom,center,left,right,top left,top right,bottom left,bottom right|}\"",
-      "  lazy-load=\"${3:false}\">",
-      "</image>"
-    ],
-    "description": "图片",
-    "prefix": "wepy.image",
-    "scope": "vue,html,vue-html,wpy"
-  },
-  "wepy.live-player": {
-    "body": [
-      "<live-player",
-      "  src=\"{{${1:src}}}\"",
-      "  mode=\"${2|live,RTC|}\"",
-      "  autoplay=\"true\"",
-      "  object-fit=\"${3|contain,fillCrop|}\"",
-      "  @statechange=\"statechange\"",
-      "  @error=\"error\"",
-      "   />"
-    ],
-    "description": "实时音视频播放",
-    "prefix": "wepy.live-player",
-    "scope": "vue,html,vue-html,wpy"
-  },
-  "wepy.live-pusher": {
-    "body": [
-      " <live-pusher",
-      "  url=\"{{${1:url}}}\"",
-      "  mode=\"${2|SD,HD,FHD,RTC|}\"",
-      "  autopush=\"true\"",
-      "  @statechange=\"statechange\"",
-      "   />"
-    ],
-    "description": "实时音视频录制",
-    "prefix": "wepy.live-pusher",
-    "scope": "vue,html,vue-html,wpy"
-  },
-  "wepy.map": {
-    "body": [
-      "<map",
-      "  longitude=\"{{${1:longitude}}}\"",
-      "  latitude=\"{{${2:latitude}}}\"",
-      "  scale=\"${3:16}\"",
-      "  markers=\"{{${4:markers}}}\"",
-      "  @tap=\"maptap\">",
-      "</map>"
-    ],
-    "description": "地图",
-    "prefix": "wepy.map",
-    "scope": "vue,html,vue-html,wpy"
+    "scope": "vue, html, vue-html, wpy"
   },
   "wepy.navigator": {
+    "description": "导航",
+    "prefix": "wepy.navigator",
     "body": [
       "<navigator",
       "  url=\"{{$1}}\"",
@@ -455,177 +556,23 @@
       "  hover-class=\"none\">",
       "</navigator>"
     ],
-    "description": "导航",
-    "prefix": "wepy.navigator",
-    "scope": "vue,html,vue-html,wpy"
+    "scope": "vue, html, vue-html, wpy"
   },
-  "wepy.open-data": {
+  "wepy.image": {
+    "description": "图片",
+    "prefix": "wepy.image",
     "body": [
-      "<open-data",
-      "  type=\"${1|groupName,userNickName,userAvatarUrl,userGender,userCity,userProvince,userCountry,userLanguage|}\">",
-      "</open-data>"
+      "<image",
+      "  src=\"{{$1}}\"",
+      "  mode=\"${2|scaleToFill,aspectFit,aspectFill,widthFix,top,bottom,center,left,right,top left,top right,bottom left,bottom right|}\"",
+      "  lazy-load=\"${3:false}\">",
+      "</image>"
     ],
-    "description": "开放能力",
-    "prefix": "wepy.open-data",
-    "scope": "vue,html,vue-html,wpy"
-  },
-  "wepy.page": {
-    "body": [
-      "<!-- $0 -->",
-      "<template>",
-      "  <view class='container'></view>",
-      "</template>",
-      "",
-      "<script>",
-      "import wepy from 'wepy';",
-      "export default class Example extends wepy.page {",
-      "  config = {",
-      "          navigationBarTitleText: \"\",",
-      "  };",
-      "",
-      "  data = {};",
-      "",
-      "  components = {};",
-      "",
-      "  methods = {};",
-      "",
-      "  events = {};",
-      "",
-      "  watch = {};",
-      "",
-      "  computed = {};",
-      "",
-      "  onLoad() {};",
-      "",
-      "  onShow() {};",
-      "}",
-      "</script>",
-      "",
-      "<style lang='scss'>",
-      "</style>",
-      ""
-    ],
-    "description": "快速添加页面代码",
-    "prefix": "wepy.page",
-    "scope": "vue,html,vue-html,wpy"
-  },
-  "wepy.progress": {
-    "body": [
-      "<progress",
-      "  percent=\"${1:0}\"",
-      "  show-info=\"${2:true}\"",
-      "  stroke-width=\"${3:6}\"",
-      "  color=\"${4:#09BB07}\"",
-      "  active=\"${5:true}\"",
-      "  >",
-      "</progress>\""
-    ],
-    "description": "进度条",
-    "prefix": "wepy.progress",
-    "scope": "vue,html,vue-html,wpy"
-  },
-  "wepy.repeat": {
-    "body": [
-      "<repeat",
-      "    for=\"{{${1:array}}}\"",
-      "    key=\"${2:index}\"",
-      "    index=\"${2:index}\"",
-      "    item=\"${3:item}\">",
-      "    $4",
-      "</repeat>"
-    ],
-    "description": "循环渲染 代替block",
-    "prefix": "wepy.repeat",
-    "scope": "vue,html,vue-html,wpy"
-  },
-  "wepy.rich-text.node": {
-    "body": [
-      "<rich-text type=\"node\" nodes=\"{{$1}}\"></rich-text>"
-    ],
-    "description": "富文本",
-    "prefix": "wepy.rich-text.node",
-    "scope": "vue,html,vue-html,wpy"
-  },
-  "wepy.rich-text.text": {
-    "body": [
-      "<rich-text type=\"text\" nodes=\"{{$1}}\"></rich-text>"
-    ],
-    "description": "富文本",
-    "prefix": "wepy.rich-text.text",
-    "scope": "vue,html,vue-html,wpy"
-  },
-  "wepy.scroll-view": {
-    "body": [
-      "<scroll-view>$1</scroll-view>"
-    ],
-    "description": "可滚动视图区域",
-    "prefix": "wepy.scroll-view",
-    "scope": "vue,html,vue-html,wpy"
-  },
-  "wepy.scroll-view.all": {
-    "body": [
-      " <scroll-view",
-      "  scroll-x",
-      "  scroll-y",
-      "  scroll-with-animation",
-      "  upper-threshold=\"50\"",
-      "  lower-threshold=\"50\"",
-      "  scroll-top=\"$1\"",
-      "  scroll-left=\"$2\"",
-      "  @scrolltoupper=\"$3\"",
-      "  @scrolltolower=\"$4\"",
-      "  @scroll=\"$5\"",
-      "  >",
-      "  $6",
-      "</scroll-view>"
-    ],
-    "description": "可滚动视图区域-全部",
-    "prefix": "wepy.scroll-view.all",
-    "scope": "vue,html,vue-html,wpy"
-  },
-  "wepy.scroll-view.x": {
-    "body": [
-      " <scroll-view",
-      "  scroll-x",
-      "  scroll-with-animation",
-      "  @scroll=\"$1\"",
-      "  >",
-      "  $2",
-      "</scroll-view>"
-    ],
-    "description": "可滚动视图区域-横向",
-    "prefix": "wepy.scroll-view.x",
-    "scope": "vue,html,vue-html,wpy"
-  },
-  "wepy.scroll-view.y": {
-    "body": [
-      " <scroll-view",
-      "  scroll-y",
-      "  scroll-with-animation",
-      "  @scroll=\"$1\"",
-      "  >",
-      "  $2",
-      "</scroll-view>"
-    ],
-    "description": "可滚动视图区域-纵向",
-    "prefix": "wepy.scroll-view.y",
-    "scope": "vue,html,vue-html,wpy"
-  },
-  "wepy.swiper": {
-    "body": [
-      "<swiper indicator-dots autoplay circular>",
-      "    <block wx:for=\"{{${1:items}}}\" wx:key=\"\">",
-      "        <swiper-item>",
-      "            <image mode=\"${2:aspectFill}\" src=\"{{${3:item}.src}}\"></image>",
-      "        </swiper-item>",
-      "    </block>",
-      "</swiper>"
-    ],
-    "description": "可滚动视图区域-全部",
-    "prefix": "wepy.swiper",
-    "scope": "vue,html,vue-html,wpy"
+    "scope": "vue, html, vue-html, wpy"
   },
   "wepy.video": {
+    "description": "视频",
+    "prefix": "wepy.video",
     "body": [
       "<video",
       "  src=\"{{$1}}\"",
@@ -638,52 +585,81 @@
       "  @error=\"error\">",
       "</video>"
     ],
-    "description": "视频",
-    "prefix": "wepy.video",
-    "scope": "vue,html,vue-html,wpy"
+    "scope": "vue, html, vue-html, wpy"
   },
-  "wepy.view": {
+  "wepy.camera": {
+    "description": "相机",
+    "prefix": "wepy.camera",
     "body": [
-      "<view>{{$1}}</view>"
+      " <camera",
+      "  device-position=\"${1|back,front|}\"",
+      "  flash=\"${2|auto, on, off|}\">",
+      "</camera>"
     ],
-    "description": "视图容器",
-    "prefix": "wepy.view",
-    "scope": "vue,html,vue-html,wpy"
+    "scope": "vue, html, vue-html, wpy"
   },
-  "wepy.view.all": {
+  "wepy.live-player": {
+    "description": "实时音视频播放",
+    "prefix": "wepy.live-player",
     "body": [
-      "<view",
-      "  hover-class=\"{{$1}}\"",
-      "  hover-stop-propagation=\"{{$2}}\"",
-      "  hover-start-time=\"{{$3}}\"",
-      "  hover-stay-time=\"{{$4}}\"",
-      "  @tap=\"$5\">",
-      "  {{$6}}",
-      "</view>"
+      "<live-player",
+      "  src=\"{{${1:src}}}\"",
+      "  mode=\"${2|live,RTC|}\"",
+      "  autoplay=\"true\"",
+      "  object-fit=\"${3|contain,fillCrop|}\"",
+      "  @statechange=\"statechange\"",
+      "  @error=\"error\"",
+      "   />"
     ],
-    "description": "视图容器-全部",
-    "prefix": "wepy.view.all",
-    "scope": "vue,html,vue-html,wpy"
+    "scope": "vue, html, vue-html, wpy"
   },
-  "wepy.view.tap": {
+  "wepy.live-pusher": {
+    "description": "实时音视频录制",
+    "prefix": "wepy.live-pusher",
     "body": [
-      "<view @tap=\"$1\">{{$2}}</view>"
+      " <live-pusher",
+      "  url=\"{{${1:url}}}\"",
+      "  mode=\"${2|SD,HD,FHD,RTC|}\"",
+      "  autopush=\"true\"",
+      "  @statechange=\"statechange\"",
+      "   />"
     ],
-    "description": "视图容器-事件",
-    "prefix": "wepy.view.tap",
-    "scope": "vue,html,vue-html,wpy"
+    "scope": "vue, html, vue-html, wpy"
   },
   "wepy.web-view": {
+    "description": "网页容器",
+    "prefix": "wepy.web-view",
     "body": [
       " <web-view",
       "  src=\"{{${1:src}}}\"",
       "  @message=\"message\"",
       "  >",
-      "",
       " </web-view>"
     ],
-    "description": "网页容器",
-    "prefix": "wepy.web-view",
-    "scope": "vue,html,vue-html,wpy"
+    "scope": "vue, html, vue-html, wpy"
+  },
+  "wepy.open-data": {
+    "description": "开放能力",
+    "prefix": "wepy.open-data",
+    "body": [
+      "<open-data",
+      "  type=\"${1|groupName,userNickName,userAvatarUrl,userGender,userCity,userProvince,userCountry,userLanguage|}\">",
+      "</open-data>"
+    ],
+    "scope": "vue, html, vue-html, wpy"
+  },
+  "wepy.map": {
+    "description": "地图",
+    "prefix": "wepy.map",
+    "body": [
+      "<map",
+      "  longitude=\"{{${1:longitude}}}\"",
+      "  latitude=\"{{${2:latitude}}}\"",
+      "  scale=\"${3:16}\"",
+      "  markers=\"{{${4:markers}}}\"",
+      "  @tap=\"maptap\">",
+      "</map>"
+    ],
+    "scope": "vue, html, vue-html, wpy"
   }
 }
