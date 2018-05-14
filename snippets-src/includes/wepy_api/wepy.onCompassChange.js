@@ -1,0 +1,1 @@
+wepy.onCompassChange(res => {});
