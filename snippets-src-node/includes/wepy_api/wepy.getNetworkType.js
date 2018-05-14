@@ -1,0 +1,1 @@
+wepy.getNetworkType({ success: res => {} });

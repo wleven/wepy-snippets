@@ -92,13 +92,13 @@ def make_snippets(src, includes_dir="includes", global_options=None):
     log_success("Make snippets %s done!\n" % src)
 
 def main():
-    make_snippets('vue.json', includes_dir="includes/wepy", global_options={
+    make_snippets('wepy_html.json', includes_dir="includes/wepy_html", global_options={
         "scope": "vue,html,vue-html,wpy"
     })
     make_snippets('weui.json', includes_dir="includes/weui", global_options={
         "scope": "vue,html,vue-html,wpy"
     })
-    make_snippets('api.json', includes_dir="includes/wx", global_options={
+    make_snippets('wepy_api.json', includes_dir="includes/wepy_api", global_options={
         "scope": "javascript,typescript"
     })
 

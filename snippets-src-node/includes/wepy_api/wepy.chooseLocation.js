@@ -1,0 +1,1 @@
+wepy.chooseLocation({ success: res => {} });

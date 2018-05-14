@@ -1,0 +1,1 @@
+wepy.getShareInfo({ withShareTicket: true });
