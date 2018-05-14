@@ -1,1 +1,0 @@
-wepy.stopHCE({ success: res => {} });

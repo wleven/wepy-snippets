@@ -1,3 +1,0 @@
-wepy.startBluetoothDevicesDiscovery({
-  success: res => {}
-});

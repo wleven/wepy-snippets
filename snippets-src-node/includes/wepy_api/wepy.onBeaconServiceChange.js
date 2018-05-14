@@ -1,1 +1,0 @@
-wepy.onBeaconServiceChange(res => {});
