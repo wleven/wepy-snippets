@@ -1,3 +1,3 @@
-wepy.onSocketOpen((res)=> {
-   console.log('WebSocket连接已打开！')
-})
+wepy.onSocketOpen(res => {
+  console.log('WebSocket连接已打开！');
+});

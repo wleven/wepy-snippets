@@ -1,0 +1,1 @@
+wepy.openSetting({ success: res => {} });

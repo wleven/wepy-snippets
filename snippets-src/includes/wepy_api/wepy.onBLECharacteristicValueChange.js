@@ -1,0 +1,1 @@
+wepy.onBLECharacteristicValueChange(res => {});

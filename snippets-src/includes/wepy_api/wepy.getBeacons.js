@@ -1,0 +1,1 @@
+wepy.getBeacons({ success: res => {} });

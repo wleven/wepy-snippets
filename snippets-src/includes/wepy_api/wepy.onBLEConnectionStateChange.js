@@ -1,0 +1,1 @@
+wepy.onBLEConnectionStateChange(res => {});
