@@ -1,1 +1,0 @@
-wepy.openBluetoothAdapter({ success: res => {} });

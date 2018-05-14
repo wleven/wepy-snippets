@@ -1,1 +1,0 @@
-wepy.updateShareMenu({ withShareTicket: true });

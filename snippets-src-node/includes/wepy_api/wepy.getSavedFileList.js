@@ -1,1 +1,0 @@
-wepy.getSavedFileList({ success: res => {} });

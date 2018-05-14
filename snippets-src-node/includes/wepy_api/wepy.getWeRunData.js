@@ -1,1 +1,0 @@
-wepy.getWeRunData({ success: res => {} });

@@ -1,3 +1,0 @@
-wepy.stopBluetoothDevicesDiscovery({
-  success: res => {}
-});

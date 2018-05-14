@@ -24,6 +24,6 @@
     ]
   },
     "scripts": {
-      "build": "node  ./snippets-src-node/index.js"
+      "build": "node  ./snippets-src/make_snippets.js"
     }
 }
